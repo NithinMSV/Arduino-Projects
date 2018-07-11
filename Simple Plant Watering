@@ -1,5 +1,5 @@
-int ACWATERPUMP = 13; //Motor Pin
-int sensor = 8; //Sensor Pin
+int motorPin = 13; //Motor Pin
+int sensorPin = 8; //Sensor Pin
 int val; //This variable stores the value received from Soil moisture sensor.
 void setup() {
   pinMode(13,OUTPUT); //Set pin 13 as OUTPUT pin, to send signal to relay
