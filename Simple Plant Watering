@@ -1,0 +1,20 @@
+int ACWATERPUMP = 13; //Motor Pin
+int sensor = 8; //Sensor Pin
+int val; //This variable stores the value received from Soil moisture sensor.
+void setup() {
+  pinMode(13,OUTPUT); //Set pin 13 as OUTPUT pin, to send signal to relay
+  pinMode(8,INPUT); //Set pin 8 as input pin, to receive data from Soil moisture sensor.
+}
+
+void loop() { 
+  val = digitalRead(8);  //Read data from soil moisture sensor  
+  if(val == LOW) 
+  {
+  digitalWrite(13,LOW); //if soil moisture sensor provides LOW value send LOW value to relay
+  }
+  else
+  {
+  digitalWrite(13,HIGH); //if soil moisture sensor provides HIGH value send HIGH value to relay
+  }
+  delay(400); //Wait for four second and then continue the loop. Change for your convenience
+}
